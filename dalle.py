@@ -23,7 +23,7 @@ def GPTQuery(myInput):
 
     chatGPTresponse = completion.choices[0].message.content
 
-    # Checks to see if ChatGPT's response needs to be passed to Wolfram Alpha
+    # Checks to see if ChatGPT's response needs to be passed to DALL-E
     if "Image Query:" in chatGPTresponse:
         properQuery = chatGPTresponse.replace("Image Query:", "")
         return ImageQuery(properQuery)
